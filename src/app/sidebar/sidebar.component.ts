@@ -12,6 +12,22 @@ export class SidebarComponent implements OnInit {
       link: '/',
       status: '',
     },
+    dieat: {
+      link: '/dieat',
+      status: '',
+    },
+    healthlink: {
+      link: '/healthlink',
+      status: '',
+    },
+    ramz: {
+      link: '/ramz',
+      status: '',
+    },
+    hydrogauges: {
+      link: '/hydrogauges',
+      status: '',
+    },
   }
 
   constructor(private router: Router) {

@@ -7,6 +7,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './contents/dashboard/dashboard.component';
+import { DieatComponent } from './contents/dieat/dieat.component';
+import { HealthlinkComponent } from './contents/healthlink/healthlink.component';
+import { RamzComponent } from './contents/ramz/ramz.component';
+import { HydrogaugesComponent } from './contents/hydrogauges/hydrogauges.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +19,10 @@ import { DashboardComponent } from './contents/dashboard/dashboard.component';
     NavbarComponent,
     FooterComponent,
     DashboardComponent,
+    DieatComponent,
+    HealthlinkComponent,
+    RamzComponent,
+    HydrogaugesComponent,
   ],
   imports: [
     BrowserModule,
