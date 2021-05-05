@@ -11,6 +11,7 @@ import { DieatComponent } from './contents/dieat/dieat.component';
 import { HealthlinkComponent } from './contents/healthlink/healthlink.component';
 import { RamzComponent } from './contents/ramz/ramz.component';
 import { HydrogaugesComponent } from './contents/hydrogauges/hydrogauges.component';
+import { DashHealthlinkComponent } from './contents/dashboard/dash-healthlink/dash-healthlink.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HydrogaugesComponent } from './contents/hydrogauges/hydrogauges.compone
     HealthlinkComponent,
     RamzComponent,
     HydrogaugesComponent,
+    DashHealthlinkComponent,
   ],
   imports: [
     BrowserModule,
