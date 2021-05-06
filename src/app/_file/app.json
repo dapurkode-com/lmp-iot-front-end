@@ -1,6 +1,14 @@
 {
   "api_url": "http://lmp.dapurkode.com/api/",
   "string_key" : {
-    "calorieJson": "calorieJson"
+    "calorieInJson": "calorieInJson",
+    "calorieOutJson": "calorieOutJson",
+    "heartRateJson": "heartRateJson",
+    "sleepJson": "sleepJson",
+    "stepJson": "stepJson",
+    "weightJson": "weightJson",
+    "phJson": "phJson",
+    "ppmJson": "ppmJson",
+    "temperatureJson": "temperatureJson"
   }
 }

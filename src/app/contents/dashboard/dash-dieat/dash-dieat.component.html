@@ -1,0 +1,16 @@
+<span class="d-flex justify-content-between">
+  <h4 class="card-title text-success">Dieat</h4>
+  <h6 class="card-title">Calorie Intake</h6>
+</span>
+<div class="row">
+  <div class="col-8 col-sm-12 col-xl-8 my-auto">
+    <div class="d-flex d-sm-block d-md-flex align-items-center">
+      <h2 class="mb-0 mr-2">{{ calorieObj?.calorieReadable || 0 }}</h2>
+      <p class="mb-0 font-weight-medium">Calorie</p>
+    </div>
+    <h6 class="text-muted font-weight-normal">{{ calorieObj?.dateReadable || '-' }}</h6>
+  </div>
+  <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+    <i class="icon-lg mdi mdi-food-fork-drink text-info ml-auto"></i>
+  </div>
+</div>

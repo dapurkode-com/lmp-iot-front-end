@@ -1,19 +1,46 @@
-<h4 class="card-title">Healthlink</h4>
+<h4 class="card-title text-success">Healthlink</h4>
 <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
   <div class="text-md-center text-xl-left">
     <h6 class="mb-1">Calorie Expended</h6>
     <p class="text-muted mb-0">{{ calorieObj?.dateReadable }}</p>
   </div>
   <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-    <h6 class="font-weight-bold mb-0">{{ calorieObj?.calorieInKilo }} kcal</h6>
+    <h6 class="font-weight-bold mb-0">{{ calorieObj?.calorieReadable || '0' }} cal</h6>
   </div>
 </div>
 <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
   <div class="text-md-center text-xl-left">
-    <h6 class="mb-1">Tranfer to Stripe</h6>
-    <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
+    <h6 class="mb-1">Heart Rate</h6>
+    <p class="text-muted mb-0">{{ heartRateObj?.dateReadable }}</p>
   </div>
   <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-    <h6 class="font-weight-bold mb-0">$593</h6>
+    <h6 class="font-weight-bold mb-0">{{ heartRateObj?.rate || '0' }} bpm</h6>
+  </div>
+</div>
+<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+  <div class="text-md-center text-xl-left">
+    <h6 class="mb-1">Sleep</h6>
+    <p class="text-muted mb-0">{{ sleepObj?.dateStartReadable }} - {{ sleepObj?.dateEndReadable }}</p>
+  </div>
+  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+    <h6 class="font-weight-bold mb-0">{{ sleepObj?.duration || '0' }} hour</h6>
+  </div>
+</div>
+<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+  <div class="text-md-center text-xl-left">
+    <h6 class="mb-1">Step</h6>
+    <p class="text-muted mb-0">{{ stepObj?.dateReadable }}</p>
+  </div>
+  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+    <h6 class="font-weight-bold mb-0">{{ stepObj?.stepReadable || '0' }} step</h6>
+  </div>
+</div>
+<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+  <div class="text-md-center text-xl-left">
+    <h6 class="mb-1">Weight</h6>
+    <p class="text-muted mb-0">{{ weightObj?.dateReadable }}</p>
+  </div>
+  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+    <h6 class="font-weight-bold mb-0">{{ weightObj?.weight || '0' }} kg</h6>
   </div>
 </div>
