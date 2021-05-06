@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'lpm-itb-front'`, () => {
+  it(`should have as title 'lmp-itb-front'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('lpm-itb-front');
+    expect(app.title).toEqual('lmp-itb-front');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('lpm-itb-front app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('lmp-itb-front app is running!');
   });
 });
