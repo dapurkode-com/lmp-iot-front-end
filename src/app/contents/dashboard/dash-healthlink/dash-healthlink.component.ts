@@ -19,6 +19,7 @@ export class DashHealthlinkComponent implements OnInit, OnDestroy {
   sleepObj = {
     dateStartReadable: null,
     dateEndReadable: null,
+    monthYear: null,
     duration: 0,
   }
   stepObj = {
@@ -52,7 +53,7 @@ export class DashHealthlinkComponent implements OnInit, OnDestroy {
       this.setSleepObj()
       this.setStepObj()
       this.setWeightObj()
-    }, 10000)
+    }, 1000*30)
   }
 
   ngOnDestroy(): void {
@@ -86,8 +87,9 @@ export class DashHealthlinkComponent implements OnInit, OnDestroy {
       .then(response => response.json())
       .then(data => {
         if (data.status != 'failed') {
-          data.dateStartReadable = moment(data.start_datetime).format('DD MMMM YYYY, h:mmA')
-          data.dateEndReadable = moment(data.end_datetime).format('DD MMMM YYYY, h:mmA')
+          data.dateStartReadable = moment(data.start_datetime).format('DD, h:mmA')
+          data.dateEndReadable = moment(data.end_datetime).format('DD, h:mmA')
+          data.monthYear = moment(data.end_datetime).format('MMMM YYYY')
           data.duration = moment(data.end_datetime).diff(moment(data.start_datetime), 'hours')
           this.sleepObj = data
         }

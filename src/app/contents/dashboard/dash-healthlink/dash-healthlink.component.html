@@ -1,46 +1,66 @@
 <h4 class="card-title text-success">Healthlink</h4>
-<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-  <div class="text-md-center text-xl-left">
+
+<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 rounded mt-3">
+  <div class="text-md-center text-xl-left mx-4">
+    <i class="icon-md mdi mdi-food text-danger"></i>
+  </div>
+  <div class="align-self-center text-md-center text-xl-left">
     <h6 class="mb-1">Calorie Expended</h6>
     <p class="text-muted mb-0">{{ calorieObj?.dateReadable }}</p>
   </div>
-  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0 mx-4">
     <h6 class="font-weight-bold mb-0">{{ calorieObj?.calorieReadable || '0' }} cal</h6>
   </div>
 </div>
-<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-  <div class="text-md-center text-xl-left">
+
+<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 rounded mt-3">
+  <div class="text-md-center text-xl-left mx-4">
+    <i class="icon-md mdi mdi-heart-pulse text-danger"></i>
+  </div>
+  <div class="align-self-center text-md-center text-xl-left">
     <h6 class="mb-1">Heart Rate</h6>
     <p class="text-muted mb-0">{{ heartRateObj?.dateReadable }}</p>
   </div>
-  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-    <h6 class="font-weight-bold mb-0">{{ heartRateObj?.rate || '0' }} bpm</h6>
+  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0 mx-4">
+    <h6 class="font-weight-bold mb-0">{{ heartRateObj?.rate || '0' }} bpml</h6>
   </div>
 </div>
-<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-  <div class="text-md-center text-xl-left">
-    <h6 class="mb-1">Sleep</h6>
-    <p class="text-muted mb-0">{{ sleepObj?.dateStartReadable }} - {{ sleepObj?.dateEndReadable }}</p>
+
+<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 rounded mt-3">
+  <div class="text-md-center text-xl-left mx-4">
+    <i class="icon-md mdi mdi-sleep text-danger"></i>
   </div>
-  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+  <div class="align-self-center text-md-center text-xl-left">
+    <h6 class="mb-1">Sleep</h6>
+    <p class="text-muted mb-0">{{ sleepObj?.dateStartReadable }} - {{ sleepObj?.dateEndReadable }} ({{ sleepObj?.monthYear }})</p>
+  </div>
+  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0 mx-4">
     <h6 class="font-weight-bold mb-0">{{ sleepObj?.duration || '0' }} hour</h6>
   </div>
 </div>
-<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-  <div class="text-md-center text-xl-left">
+
+<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 rounded mt-3">
+  <div class="text-md-center text-xl-left mx-4">
+    <i class="icon-md mdi mdi-seat-legroom-extra text-danger"></i>
+  </div>
+  <div class="align-self-center text-md-center text-xl-left">
     <h6 class="mb-1">Step</h6>
     <p class="text-muted mb-0">{{ stepObj?.dateReadable }}</p>
   </div>
-  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0 mx-4">
     <h6 class="font-weight-bold mb-0">{{ stepObj?.stepReadable || '0' }} step</h6>
   </div>
 </div>
-<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-  <div class="text-md-center text-xl-left">
+
+<div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 rounded mt-3">
+  <div class="text-md-center text-xl-left mx-4">
+    <i class="icon-md mdi mdi-weight-kilogram text-danger"></i>
+  </div>
+  <div class="align-self-center text-md-center text-xl-left">
     <h6 class="mb-1">Weight</h6>
     <p class="text-muted mb-0">{{ weightObj?.dateReadable }}</p>
   </div>
-  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+  <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0 mx-4">
     <h6 class="font-weight-bold mb-0">{{ weightObj?.weight || '0' }} kg</h6>
   </div>
 </div>

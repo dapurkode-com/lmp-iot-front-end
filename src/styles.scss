@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+.table {
+  th {
+    color: white !important;
+    padding: 0.9375rem 25px;
+  }
+  td {
+    padding: 0.9375rem 25px;
+  }
+}

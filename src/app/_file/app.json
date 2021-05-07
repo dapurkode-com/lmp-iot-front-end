@@ -9,6 +9,7 @@
     "weightJson": "weightJson",
     "phJson": "phJson",
     "ppmJson": "ppmJson",
-    "temperatureJson": "temperatureJson"
+    "temperatureJson": "temperatureJson",
+    "stockSummaryJson": "stockSummaryJson"
   }
 }
