@@ -8,7 +8,7 @@ import global from '../../../_file/app.json';
   styleUrls: ['./dash-ramz.component.scss']
 })
 export class DashRamzComponent implements OnInit {
-  stockSummary = {
+  stockSummary: any = {
     stocks: [],
     pagination: {}
   }

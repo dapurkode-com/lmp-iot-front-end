@@ -20,7 +20,7 @@
 </div>
 
 <ng-template #trueBlock>
-  <tr *ngFor="let stock of stockSummary.stocks">
+  <tr *ngFor="let stock of stockSummary?.stocks">
     <td>{{ stock.barcode }}</td>
     <td>{{ stock.name }}</td>
     <td>{{ stock.expiredDateReadable }}</td>
