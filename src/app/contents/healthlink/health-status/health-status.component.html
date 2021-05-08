@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Calorie Expended</h4>
+        <div class="row">
+          <div class="col-8 col-sm-12 col-xl-8 my-auto">
+            <div class="d-flex d-sm-block d-md-flex align-items-center">
+              <h2 class="mb-0 mr-2">{{ calorieObj?.calorieReadable || 0 }}</h2>
+              <p class="mb-0 font-weight-medium">calories</p>
+            </div>
+            <h6 class="text-muted font-weight-normal">{{ calorieObj?.dateReadable || '-' }}</h6>
+          </div>
+          <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+            <i class="icon-lg mdi mdi-food text-danger ml-auto"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Heart Rate</h4>
+        <div class="row">
+          <div class="col-8 col-sm-12 col-xl-8 my-auto">
+            <div class="d-flex d-sm-block d-md-flex align-items-center">
+              <h2 class="mb-0 mr-2">{{ calorieObj?.calorieReadable || 0 }}</h2>
+              <p class="mb-0 font-weight-medium">bpm</p>
+            </div>
+            <h6 class="text-muted font-weight-normal">{{ calorieObj?.dateReadable || '-' }}</h6>
+          </div>
+          <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+            <i class="icon-lg mdi mdi-heart-pulse text-danger ml-auto"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Weight</h4>
+        <div class="row">
+          <div class="col-8 col-sm-12 col-xl-8 my-auto">
+            <div class="d-flex d-sm-block d-md-flex align-items-center">
+              <h2 class="mb-0 mr-2">{{ calorieObj?.calorieReadable || 0 }}</h2>
+              <p class="mb-0 font-weight-medium">kg</p>
+            </div>
+            <h6 class="text-muted font-weight-normal">{{ calorieObj?.dateReadable || '-' }}</h6>
+          </div>
+          <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+            <i class="icon-lg mdi mdi-weight-kilogram text-danger ml-auto"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

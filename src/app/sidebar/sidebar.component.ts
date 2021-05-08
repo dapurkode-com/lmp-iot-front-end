@@ -9,7 +9,7 @@ import { NavigationStart, Router } from '@angular/router';
 export class SidebarComponent implements OnInit {
   urlMenu = {
     dashboard: {
-      link: '/',
+      link: '/dashboard',
       status: '',
     },
     dieat: {
@@ -17,7 +17,7 @@ export class SidebarComponent implements OnInit {
       status: '',
     },
     healthlink: {
-      link: '/healthlink',
+      link: '/healthlink/status',
       status: '',
     },
     ramz: {
@@ -30,24 +30,25 @@ export class SidebarComponent implements OnInit {
     },
   }
 
-  constructor(private router: Router) {
-    this.urlMenuActivation()
-  }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-  }
+    this.urlMenuActivation(this.router.url)
 
-  urlMenuActivation(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        this.keys(this.urlMenu).forEach(key => {
-          this.urlMenu[key].status = ''
-          if (event.url == this.urlMenu[key].link) {
-            this.urlMenu[key].status = 'active'
-          }
-        })
+        this.urlMenuActivation(event.url)
       }
     });
+  }
+
+  urlMenuActivation(currentUrl: String): void {
+    this.keys(this.urlMenu).forEach(key => {
+      this.urlMenu[key].status = ''
+      if (currentUrl.includes(this.urlMenu[key].link)) {
+        this.urlMenu[key].status = 'active'
+      }
+    })
   }
 
   keys<O extends object>(obj: O): Array<keyof O> {

@@ -42,7 +42,6 @@
                         ],
                         "scripts": [
                             "assets/corona-free-dark-bootstrap-admin-template/template/assets/vendors/js/vendor.bundle.base.js",
-                            "assets/corona-free-dark-bootstrap-admin-template/template/assets/vendors/chart.js/Chart.min.js",
                             "assets/corona-free-dark-bootstrap-admin-template/template/assets/vendors/progressbar.js/progressbar.min.js",
                             "assets/corona-free-dark-bootstrap-admin-template/template/assets/vendors/jvectormap/jquery-jvectormap.min.js",
                             "assets/corona-free-dark-bootstrap-admin-template/template/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js",

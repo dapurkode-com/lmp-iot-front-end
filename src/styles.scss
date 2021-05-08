@@ -7,3 +7,32 @@
     padding: 0.9375rem 25px;
   }
 }
+
+.tab__link {
+  display: grid;
+  gap: .5rem;
+  direction: rtl;
+  grid-template-columns: 1fr;
+  @media only screen and (min-width: 490px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media only screen and (min-width: 650px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media only screen and (min-width: 810px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @media only screen and (min-width: 970px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  @media only screen and (min-width: 993px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media only screen and (min-width: 1040px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @media only screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
