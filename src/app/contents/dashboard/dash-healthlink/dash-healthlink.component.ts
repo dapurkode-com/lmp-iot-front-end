@@ -99,7 +99,7 @@ export class DashHealthlinkComponent implements OnInit, OnDestroy {
     fetch(`${global.api_url}step/today`)
       .then(response => response.json())
       .then(data => {
-        data.dateReadable = moment(data.start_datetime).format('DD MMMM YYYY, h:mmA')
+        data.dateReadable = moment(data.datetime).format('DD MMMM YYYY, h:mmA')
         data.stepReadable = new Intl.NumberFormat().format(data.step)
         this.stepObj = data
       })

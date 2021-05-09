@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center text-primary mb-0" style="font-size: 7rem"><i [ngClass]="stepStatus?.icon" class="fas"></i></h1>
+        <p class="text-center text-muted mb-4">- {{ stepStatus?.status }} -</p>
+        <div class="d-flex justify-content-center align-items-center">
+          <h2 class="mb-0 mr-2">{{ stepObj?.stepReadable || 0 }}</h2>
+          <p class="mb-0 font-weight-medium">step</p>
+        </div>
+        <p class="text-center text-muted mb-0">{{ stepObj?.dateReadable || '-' }}</p>
+      </div>
+    </div>
+  </div>
+</div>

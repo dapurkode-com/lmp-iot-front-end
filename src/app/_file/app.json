@@ -10,6 +10,7 @@
     "phJson": "phJson",
     "ppmJson": "ppmJson",
     "temperatureJson": "temperatureJson",
-    "stockSummaryJson": "stockSummaryJson"
+    "stockSummaryJson": "stockSummaryJson",
+    "stepStatusJson": "stepStatusJson"
   }
 }

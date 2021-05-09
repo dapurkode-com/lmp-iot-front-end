@@ -45,8 +45,14 @@ export class SidebarComponent implements OnInit {
   urlMenuActivation(currentUrl: String): void {
     this.keys(this.urlMenu).forEach(key => {
       this.urlMenu[key].status = ''
-      if (currentUrl.includes(this.urlMenu[key].link)) {
-        this.urlMenu[key].status = 'active'
+      if (key == 'healthlink') {
+        if (currentUrl.includes('healthlink')) {
+          this.urlMenu[key].status = 'active'
+        }
+      } else {
+        if (currentUrl.includes(this.urlMenu[key].link)) {
+          this.urlMenu[key].status = 'active'
+        }
       }
     })
   }

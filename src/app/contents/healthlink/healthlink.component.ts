@@ -12,8 +12,16 @@ export class HealthlinkComponent implements OnInit {
       link: '/healthlink/status',
       status: 'btn-outline-danger',
     },
-    heartrate: {
-      link: '/healthlink/heartrate',
+    mood: {
+      link: '/healthlink/mood',
+      status: 'btn-outline-danger',
+    },
+    step: {
+      link: '/healthlink/step',
+      status: 'btn-outline-danger',
+    },
+    sleep: {
+      link: '/healthlink/sleep',
       status: 'btn-outline-danger',
     },
   }

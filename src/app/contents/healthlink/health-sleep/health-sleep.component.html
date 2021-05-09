@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center text-info mb-0" style="font-size: 7rem"><i class="fas fa-bed"></i></h1>
+        <p class="text-center text-muted mb-4">- Sleep -</p>
+        <div class="d-flex justify-content-center align-items-center">
+          <h2 class="mb-0 mr-2">{{ sleepObj?.duration || 0 }}</h2>
+          <p class="mb-0 font-weight-medium">hours</p>
+        </div>
+        <p class="text-center text-muted mb-0">{{ sleepObj?.dateStartReadable }} - {{ sleepObj?.dateEndReadable }} ({{ sleepObj?.monthYear }})</p>
+      </div>
+    </div>
+  </div>
+</div>

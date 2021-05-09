@@ -6,6 +6,9 @@ import { HealthlinkComponent } from './healthlink.component';
 import { HealthCalorieComponent } from './health-calorie/health-calorie.component';
 import { HealthHeartrateComponent } from './health-heartrate/health-heartrate.component';
 import { HealthStatusComponent } from './health-status/health-status.component';
+import { HealthMoodComponent } from './health-mood/health-mood.component';
+import { HealthStepComponent } from './health-step/health-step.component';
+import { HealthSleepComponent } from './health-sleep/health-sleep.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +16,9 @@ import { HealthStatusComponent } from './health-status/health-status.component';
     HealthCalorieComponent,
     HealthHeartrateComponent,
     HealthStatusComponent,
+    HealthMoodComponent,
+    HealthStepComponent,
+    HealthSleepComponent,
   ],
   imports: [
     CommonModule,
