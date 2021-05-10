@@ -15,26 +15,18 @@
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
-    <li [ngClass]="urlMenu.dieat.status" class="nav-item menu-items">
+    <!-- <li [ngClass]="urlMenu.dieat.status" class="nav-item menu-items">
       <a class="nav-link" [routerLink]="urlMenu.dieat.link">
         <span class="menu-icon">
           <i class="mdi mdi-food"></i>
         </span>
         <span class="menu-title">Dieat</span>
       </a>
-    </li>
-    <li [ngClass]="urlMenu.ramz.status" class="nav-item menu-items">
-      <a class="nav-link" [routerLink]="urlMenu.ramz.link">
-        <span class="menu-icon">
-          <i class="mdi mdi-arrange-bring-forward"></i>
-        </span>
-        <span class="menu-title">Ram-Z</span>
-      </a>
-    </li>
+    </li> -->
     <li [ngClass]="urlMenu.healthlink.status" class="nav-item menu-items">
       <a class="nav-link" [routerLink]="urlMenu.healthlink.link">
         <span class="menu-icon">
-          <i class="mdi mdi-heart-pulse"></i>
+          <i class="text-danger mdi mdi-heart-pulse"></i>
         </span>
         <span class="menu-title">Healthlink</span>
       </a>
@@ -42,9 +34,17 @@
     <li [ngClass]="urlMenu.hydrogauges.status" class="nav-item menu-items">
       <a class="nav-link" [routerLink]="urlMenu.hydrogauges.link">
         <span class="menu-icon">
-          <i class="mdi mdi-water"></i>
+          <i class="text-primary mdi mdi-water"></i>
         </span>
         <span class="menu-title">Hydrogauges</span>
+      </a>
+    </li>
+    <li [ngClass]="urlMenu.ramz.status" class="nav-item menu-items">
+      <a class="nav-link" [routerLink]="urlMenu.ramz.link">
+        <span class="menu-icon">
+          <i class="text-warning mdi mdi-arrange-bring-forward"></i>
+        </span>
+        <span class="menu-title">Ram-Z</span>
       </a>
     </li>
   </ul>

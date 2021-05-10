@@ -1,7 +1,7 @@
 <div class="card-body pb-0">
   <span class="d-flex justify-content-between">
     <h4 class="card-title text-success">Ram-Z</h4>
-    <h6 class="card-title">Stock</h6>
+    <h6 class="card-title">Stock Summary</h6>
   </span>
 </div>
 
@@ -24,7 +24,7 @@
     <td>{{ stock.barcode }}</td>
     <td>{{ stock.name }}</td>
     <td>{{ stock.expiredDateReadable }}</td>
-    <td class="text-right">{{ stock.stock }}</td>
+    <td class="text-right">{{ stock.summarize_stock }}</td>
   </tr>
 </ng-template>
 <ng-template #falseBlock>

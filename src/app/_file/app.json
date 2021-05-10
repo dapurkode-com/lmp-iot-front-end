@@ -11,6 +11,7 @@
     "ppmJson": "ppmJson",
     "temperatureJson": "temperatureJson",
     "stockSummaryJson": "stockSummaryJson",
-    "stepStatusJson": "stepStatusJson"
+    "stepStatusJson": "stepStatusJson",
+    "calorieDeviationJson": "calorieDeviationJson"
   }
 }

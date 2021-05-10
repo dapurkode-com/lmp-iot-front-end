@@ -15,6 +15,7 @@ import { DashHealthlinkComponent } from './contents/dashboard/dash-healthlink/da
 import { DashDieatComponent } from './contents/dashboard/dash-dieat/dash-dieat.component';
 import { DashHydrogaugesComponent } from './contents/dashboard/dash-hydrogauges/dash-hydrogauges.component';
 import { DashRamzComponent } from './contents/dashboard/dash-ramz/dash-ramz.component';
+import { DashCalorieDeviationComponent } from './contents/dashboard/dash-calorie-deviation/dash-calorie-deviation.component';
 // import { HealthCalorieComponent } from './contents/healthlink/health-calorie/health-calorie.component';
 // import { HealthHeartrateComponent } from './contents/healthlink/health-heartrate/health-heartrate.component';
 
@@ -33,6 +34,7 @@ import { DashRamzComponent } from './contents/dashboard/dash-ramz/dash-ramz.comp
     DashDieatComponent,
     DashHydrogaugesComponent,
     DashRamzComponent,
+    DashCalorieDeviationComponent,
     // HealthCalorieComponent,
     // HealthHeartrateComponent,
   ],
