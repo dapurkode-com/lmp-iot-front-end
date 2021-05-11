@@ -12,6 +12,7 @@ export class DashRamzComponent implements OnInit {
     stocks: [],
     pagination: {}
   }
+  pageActive = 1
   timeInterval: any
 
   constructor() { }
@@ -30,14 +31,23 @@ export class DashRamzComponent implements OnInit {
     localStorage.setItem(global.string_key.stockSummaryJson, JSON.stringify(this.stockSummary))
   }
 
-  setStockSummary(): any {
-    fetch(`${global.api_url}stock/summary`)
+  setStockSummary(): void {
+    fetch(`${global.api_url}stock/summary?page=${this.pageActive}&sort=DESC&number_item=5`)
       .then(response => response.json())
       .then(data => {
         data.stocks.forEach((stock: any, i: any) => {
           data.stocks[i].expiredDateReadable = moment(stock.expired_date).format('DD MMMM YYYY, h:mmA')
         });
+        data.pagination.startIndex = (data.pagination.per_page * data.pagination.current_page) - data.pagination.per_page + 1
+        data.pagination.endIndex = data.pagination.startIndex + data.pagination.count - 1
         this.stockSummary = data
       });
+  }
+
+  setPageActiveAndStockSummary(page: number): void {
+    if (page >=1 && page <= this.stockSummary.pagination.total_pages) {
+      this.pageActive = page
+      this.setStockSummary()
+    }
   }
 }

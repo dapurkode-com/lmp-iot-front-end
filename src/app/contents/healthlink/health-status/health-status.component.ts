@@ -51,7 +51,7 @@ export class HealthStatusComponent implements OnInit {
     fetch(`${global.api_url}calorie-expended/today`)
       .then(response => response.json())
       .then(data => {
-        data.calorieReadable = new Intl.NumberFormat().format(data.calorie)
+        data.calorieReadable = new Intl.NumberFormat().format(data.calorie || 0)
         data.dateReadable = moment(data.datetime).format('DD MMMM YYYY, h:mmA')
         this.calorieObj = data
       });

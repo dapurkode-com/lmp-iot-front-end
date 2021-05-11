@@ -43,7 +43,7 @@ export class HealthStepComponent implements OnInit {
       .then(response => response.json())
       .then(data => {
         data.dateReadable = moment(data.datetime).format('DD MMMM YYYY, h:mmA')
-        data.stepReadable = new Intl.NumberFormat().format(data.step)
+        data.stepReadable = new Intl.NumberFormat().format(data.step || 0)
         this.stepObj = data
       })
     }

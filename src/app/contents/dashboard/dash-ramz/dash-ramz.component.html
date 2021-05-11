@@ -1,11 +1,11 @@
 <div class="card-body pb-0">
   <span class="d-flex justify-content-between">
-    <h4 class="card-title text-success">Ram-Z</h4>
+    <h4 class="card-title">Ram-Z</h4>
     <h6 class="card-title">Stock Summary</h6>
   </span>
 </div>
 
-<div class="table-responsive" style="margin-bottom: 25px;">
+<div class="table-responsive mb-1">
   <table class="table">
     <thead>
       <tr>
@@ -17,6 +17,13 @@
     </thead>
     <tbody *ngIf="stockSummary?.stocks?.length > 0; then trueBlock else falseBlock"></tbody>
   </table>
+</div>
+<div class="d-flex justify-content-between" style="padding: 0 25px; margin-bottom: 28px">
+  <p class="align-self-center text-muted mb-0">{{ stockSummary.pagination.startIndex || 0 }} to {{ stockSummary.pagination.endIndex || 0 }} of {{ stockSummary.pagination.total || 0 }} data</p>
+  <div class="btn-group">
+    <button (click)="setPageActiveAndStockSummary(stockSummary.pagination.current_page - 1)" type="button" class="btn btn-outline-secondary"><span class="fas fa-chevron-left"></span></button>
+    <button (click)="setPageActiveAndStockSummary(stockSummary.pagination.current_page + 1)" type="button" class="btn btn-outline-secondary"><span class="fas fa-chevron-right"></span></button>
+  </div>
 </div>
 
 <ng-template #trueBlock>

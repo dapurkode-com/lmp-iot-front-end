@@ -69,7 +69,7 @@ export class DashHealthlinkComponent implements OnInit, OnDestroy {
     fetch(`${global.api_url}calorie-expended/today`)
       .then(response => response.json())
       .then(data => {
-        data.calorieReadable = new Intl.NumberFormat().format(data.calorie)
+        data.calorieReadable = new Intl.NumberFormat().format(data.calorie || 0)
         data.dateReadable = moment(data.datetime).format('DD MMMM YYYY, h:mmA')
         this.calorieObj = data
       });
@@ -100,7 +100,7 @@ export class DashHealthlinkComponent implements OnInit, OnDestroy {
       .then(response => response.json())
       .then(data => {
         data.dateReadable = moment(data.datetime).format('DD MMMM YYYY, h:mmA')
-        data.stepReadable = new Intl.NumberFormat().format(data.step)
+        data.stepReadable = new Intl.NumberFormat().format(data.step || 0)
         this.stepObj = data
       })
   }
