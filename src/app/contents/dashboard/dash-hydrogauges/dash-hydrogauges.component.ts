@@ -37,7 +37,7 @@ export class DashHydrogaugesComponent implements OnInit, OnDestroy {
       this.setPhObj()
       this.setPpmObj()
       this.setTemperatureObj()
-    }, 1000*30)
+    }, 1000*60)
   }
 
   ngOnDestroy(): void {

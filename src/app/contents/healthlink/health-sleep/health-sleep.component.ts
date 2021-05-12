@@ -25,7 +25,7 @@ export class HealthSleepComponent implements OnInit {
 
     this.timeInterval =  setInterval(() => {
       this.setSleepObj()
-    }, 1000*30)
+    }, 1000*60)
   }
   ngOnDestroy(): void {
     clearInterval(this.timeInterval)

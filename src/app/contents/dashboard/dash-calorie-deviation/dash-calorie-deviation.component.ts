@@ -24,7 +24,7 @@ export class DashCalorieDeviationComponent implements OnInit {
 
     this.timeInterval =  setInterval(() => {
       this.setCalorieDeviation()
-    }, 1000*30)
+    }, 1000*60)
   }
   ngOnDestroy(): void {
     clearInterval(this.timeInterval)

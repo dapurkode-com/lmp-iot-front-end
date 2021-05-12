@@ -37,7 +37,7 @@ export class HealthStatusComponent implements OnInit {
       this.setCalorieObj()
       this.setHeartRateObj()
       this.setWeightObj()
-    }, 1000*30)
+    }, 1000*60)
   }
 
   ngOnDestroy(): void {

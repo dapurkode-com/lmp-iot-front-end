@@ -23,7 +23,7 @@ export class DashDieatComponent implements OnInit, OnDestroy {
 
     this.timeInterval =  setInterval(() => {
       this.setCalorieObj()
-    }, 1000*30)
+    }, 1000*60)
   }
 
   ngOnDestroy(): void {

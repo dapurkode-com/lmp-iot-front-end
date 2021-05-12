@@ -30,7 +30,7 @@ export class HealthStepComponent implements OnInit {
     this.timeInterval = setInterval(() => {
       this.setStepObj()
       this.setStepStatus()
-    }, 1000*30)
+    }, 1000*60)
   }
   ngOnDestroy(): void {
     clearInterval(this.timeInterval)

@@ -24,7 +24,7 @@ export class DashRamzComponent implements OnInit {
 
     this.timeInterval =  setInterval(() => {
       this.setStockSummary()
-    }, 1000*30)
+    }, 1000*60)
   }
   ngOnDestroy(): void {
     clearInterval(this.timeInterval)
