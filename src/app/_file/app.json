@@ -10,6 +10,7 @@
     "phJson": "phJson",
     "ppmJson": "ppmJson",
     "temperatureJson": "temperatureJson",
+    "stockJson": "stockJson",
     "stockSummaryJson": "stockSummaryJson",
     "stepStatusJson": "stepStatusJson",
     "calorieDeviationJson": "calorieDeviationJson"
