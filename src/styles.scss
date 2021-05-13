@@ -1,5 +1,9 @@
 @import url('../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
 
+$color-warning: #ffab00;
+$color-warning-dark: #bd7f04;
+$color-muted: #6c7293;
+
 .table {
   th {
     color: white !important;
@@ -79,3 +83,34 @@
   }
 }
 
+.btn-outline-muted {
+  color: $color-muted;
+  border-color: $color-muted;
+}
+.btn-outline-muted:hover {
+  color: $color-muted;
+  background: white;
+}
+
+.corona-gradient-card {
+  table {
+    color: $color-warning;
+    th {
+      border-bottom: 1px solid $color-warning-dark;
+    }
+    td {
+      border-top: 1px solid $color-warning-dark;
+    }
+  }
+  .text-muted {
+    color: $color-warning !important;
+  }
+  .btn-outline-muted {
+    color: $color-warning;
+    border-color: $color-warning;
+  }
+  .btn-outline-muted:hover {
+    color: $color-warning;
+    background: white;
+  }
+}

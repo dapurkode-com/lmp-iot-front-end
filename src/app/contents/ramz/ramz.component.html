@@ -1,13 +1,6 @@
-<div class="page-header">
-  <h3 class="page-title">Ram-Z</h3>
-  <span class="tab__link">
-    <a routerLink="/ramz" class="btn btn-warning btn-fw">Info</a>
-  </span>
-</div>
-
 <div class="row">
   <div class="col-12 grid-margin">
-    <div class="card">
+    <div class="card card corona-gradient-card">
 
       <div class="card-body pb-0">
         <span class="d-flex justify-content-between">
@@ -22,6 +15,7 @@
               <th>Barcode</th>
               <th>Name</th>
               <th>Expired</th>
+              <th>Within</th>
               <th class="text-right">Qty</th>
             </tr>
           </thead>
@@ -31,14 +25,23 @@
       <div class="d-flex justify-content-between" style="padding: 0 25px; margin-bottom: 28px">
         <p class="align-self-center text-muted mb-0">{{ stockSummary.pagination.startIndex || 0 }} to {{ stockSummary.pagination.endIndex || 0 }} of {{ stockSummary.pagination.total || 0 }} data</p>
         <div class="btn-group">
-          <button (click)="setPageActiveAndStockSummary(stockSummary.pagination.current_page - 1)" type="button" class="btn btn-outline-secondary"><span class="fas fa-chevron-left"></span></button>
-          <button (click)="setPageActiveAndStockSummary(stockSummary.pagination.current_page + 1)" type="button" class="btn btn-outline-secondary"><span class="fas fa-chevron-right"></span></button>
+          <button (click)="setPageActiveAndStockSummary(stockSummary.pagination.current_page - 1)" type="button" class="btn btn-outline-muted"><span class="fas fa-chevron-left"></span></button>
+          <button (click)="setPageActiveAndStockSummary(stockSummary.pagination.current_page + 1)" type="button" class="btn btn-outline-muted"><span class="fas fa-chevron-right"></span></button>
         </div>
       </div>
 
     </div>
   </div>
+</div>
 
+<div class="page-header">
+  <h3 class="page-title">Ram-Z</h3>
+  <span class="tab__link">
+    <a routerLink="/ramz" class="btn btn-warning btn-fw">Detail</a>
+  </span>
+</div>
+
+<div class="row">
   <div class="col-12">
     <div class="card">
 
@@ -65,8 +68,8 @@
       <div class="d-flex justify-content-between" style="padding: 0 25px; margin-bottom: 28px">
         <p class="align-self-center text-muted mb-0">{{ stock?.pagination.startIndex || 0 }} to {{ stock?.pagination.endIndex || 0 }} of {{ stock?.pagination.total || 0 }} data</p>
         <div class="btn-group">
-          <button (click)="setPageActiveAndStock(stock.pagination.current_page - 1)" type="button" class="btn btn-outline-secondary"><span class="fas fa-chevron-left"></span></button>
-          <button (click)="setPageActiveAndStock(stock.pagination.current_page + 1)" type="button" class="btn btn-outline-secondary"><span class="fas fa-chevron-right"></span></button>
+          <button (click)="setPageActiveAndStock(stock.pagination.current_page - 1)" type="button" class="btn btn-outline-muted"><span class="fas fa-chevron-left"></span></button>
+          <button (click)="setPageActiveAndStock(stock.pagination.current_page + 1)" type="button" class="btn btn-outline-muted"><span class="fas fa-chevron-right"></span></button>
         </div>
       </div>
 
@@ -79,6 +82,7 @@
     <td>{{ stock.barcode }}</td>
     <td>{{ stock.name }}</td>
     <td>{{ stock.expiredDateReadable }}</td>
+    <td>{{ stock.expiredWithin }}</td>
     <td class="text-right">{{ stock.summarize_stock }}</td>
   </tr>
 </ng-template>

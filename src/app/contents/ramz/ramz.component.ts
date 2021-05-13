@@ -46,6 +46,27 @@ export class RamzComponent implements OnInit {
       .then(data => {
         data.stocks.forEach((stock: any, i: any) => {
           data.stocks[i].expiredDateReadable = moment(stock.expired_date).format('DD MMMM YYYY')
+
+          let startDate = moment();
+          let endDate = moment(stock.expired_date);
+          let months = endDate.diff(startDate, 'months');
+          startDate.add(months, 'months');
+          let days = endDate.diff(startDate, 'days');
+          if (months > 0) {
+            if (months == 1) {
+              data.stocks[i].expiredWithin = `${months} Month`;
+            } else {
+              data.stocks[i].expiredWithin = `${months} Months`;
+            }
+          } else if (days > 0) {
+            if (days == 1) {
+              data.stocks[i].expiredWithin = `${days} Day`;
+            } else {
+              data.stocks[i].expiredWithin = `${days} Days`;
+            }
+          } else {
+            data.stocks[i].expiredWithin = `Expired`;
+          }
         });
         data.pagination.startIndex = (data.pagination.per_page * data.pagination.current_page) - data.pagination.per_page + 1
         data.pagination.endIndex = data.pagination.startIndex + data.pagination.count - 1
