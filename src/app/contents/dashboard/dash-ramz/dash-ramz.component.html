@@ -1,7 +1,15 @@
 <div class="card-body pb-0">
   <span class="d-flex justify-content-between">
-    <h4 class="card-title">Ram-Z</h4>
-    <h6 class="card-title">Stock Summary</h6>
+    <h4 class="card-title">Ram-Z <span class="text-muted pl-2">(</span> Stock Summary <span class="text-muted">)</span></h4>
+    <span class="my__form__select">
+      <select (change)="applyStockSummaryFilter()" [(ngModel)]="stockSummaryFilterSelect">
+        <option value="">All data</option>
+        <option value="3">3 months</option>
+        <option value="1">1 month</option>
+        <option value="7">7 days</option>
+      </select>
+      <span class="select__icon fas fa-chevron-down"></span>
+    </span>
   </span>
 </div>
 

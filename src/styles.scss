@@ -113,4 +113,38 @@ $color-muted: #6c7293;
     color: $color-warning;
     background: white;
   }
+  .icon.icon-box-danger {
+    background: #f44336;
+    color: #ffc107;
+  }
+  .icon.icon-box-success {
+    background: #009688;
+    color: #cddc39;
+  }
+  @media (max-width: 576px) {
+    h4 {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.my__form__select {
+  position: relative;
+  select {
+    border-radius: 4px;
+    border: unset;
+    padding: 1px 30px 1px 10px;
+    height: 28px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 14px;
+  }
+  .select__icon {
+    position: absolute;
+    right: 10px;
+    color: black;
+    top: 7px;
+    font-size: 14px;
+  }
 }

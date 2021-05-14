@@ -12,6 +12,8 @@ export class RamzComponent implements OnInit {
     stocks: [],
     pagination: {}
   }
+  stockSummaryFilterSelect: any = ''
+  stockSummaryFilterString = ''
   stock: any = {
     stocks: [],
     pagination: {}
@@ -41,11 +43,19 @@ export class RamzComponent implements OnInit {
   }
 
   setStockSummary(): void {
-    fetch(`${global.api_url}stock/summary?page=${this.pageActiveStockSummary}&sort=DESC&number_item=5`)
+    fetch(`${global.api_url}stock/summary?page=${this.pageActiveStockSummary}&sort=DESC&number_item=5${this.stockSummaryFilterString}`)
       .then(response => response.json())
       .then(data => {
-        data.stocks.forEach((stock: any, i: any) => {
-          data.stocks[i].expiredDateReadable = moment(stock.expired_date).format('DD MMMM YYYY')
+        let _data: any
+
+        if (data.data) {
+          _data = data.data
+        } else {
+          _data = data
+        }
+
+        _data.stocks.forEach((stock: any, i: any) => {
+          _data.stocks[i].expiredDateReadable = moment(stock.expired_date).format('DD MMMM YYYY')
 
           let startDate = moment();
           let endDate = moment(stock.expired_date);
@@ -54,23 +64,23 @@ export class RamzComponent implements OnInit {
           let days = endDate.diff(startDate, 'days');
           if (months > 0) {
             if (months == 1) {
-              data.stocks[i].expiredWithin = `${months} Month`;
+              _data.stocks[i].expiredWithin = `${months} Month`;
             } else {
-              data.stocks[i].expiredWithin = `${months} Months`;
+              _data.stocks[i].expiredWithin = `${months} Months`;
             }
           } else if (days > 0) {
             if (days == 1) {
-              data.stocks[i].expiredWithin = `${days} Day`;
+              _data.stocks[i].expiredWithin = `${days} Day`;
             } else {
-              data.stocks[i].expiredWithin = `${days} Days`;
+              _data.stocks[i].expiredWithin = `${days} Days`;
             }
           } else {
-            data.stocks[i].expiredWithin = `Expired`;
+            _data.stocks[i].expiredWithin = `Expired`;
           }
         });
-        data.pagination.startIndex = (data.pagination.per_page * data.pagination.current_page) - data.pagination.per_page + 1
-        data.pagination.endIndex = data.pagination.startIndex + data.pagination.count - 1
-        this.stockSummary = data
+        _data.pagination.startIndex = (_data.pagination.per_page * _data.pagination.current_page) - _data.pagination.per_page + 1
+        _data.pagination.endIndex = _data.pagination.startIndex + _data.pagination.count - 1
+        this.stockSummary = _data
       });
   }
   setStock(): void {
@@ -104,5 +114,15 @@ export class RamzComponent implements OnInit {
       this.pageActiveStock = page
       this.setStock()
     }
+  }
+  applyStockSummaryFilter(): void {
+    if (this.stockSummaryFilterSelect == 7) {
+      this.stockSummaryFilterString = `&range_day=${this.stockSummaryFilterSelect}`
+    } else if (this.stockSummaryFilterSelect == '') {
+      this.stockSummaryFilterString = ``
+    } else {
+      this.stockSummaryFilterString = `&range_month=${this.stockSummaryFilterSelect}`
+    }
+    this.setStockSummary()
   }
 }
