@@ -1,18 +1,19 @@
 {
-  "api_url": "http://lmp.dapurkode.com/api/",
-  "string_key" : {
-    "calorieInJson": "calorieInJson",
-    "calorieOutJson": "calorieOutJson",
-    "heartRateJson": "heartRateJson",
-    "sleepJson": "sleepJson",
-    "stepJson": "stepJson",
-    "weightJson": "weightJson",
-    "phJson": "phJson",
-    "ppmJson": "ppmJson",
-    "temperatureJson": "temperatureJson",
-    "stockJson": "stockJson",
-    "stockSummaryJson": "stockSummaryJson",
-    "stepStatusJson": "stepStatusJson",
-    "calorieDeviationJson": "calorieDeviationJson"
-  }
+    "api_url": "http://lmp.dapurkode.com/api/",
+    "string_key": {
+        "calorieInJson": "calorieInJson",
+        "calorieOutJson": "calorieOutJson",
+        "heartRateJson": "heartRateJson",
+        "sleepJson": "sleepJson",
+        "stepJson": "stepJson",
+        "weightJson": "weightJson",
+        "phJson": "phJson",
+        "conductivityJson": "conductivityJson",
+        "ppmJson": "ppmJson",
+        "temperatureJson": "temperatureJson",
+        "stockJson": "stockJson",
+        "stockSummaryJson": "stockSummaryJson",
+        "stepStatusJson": "stepStatusJson",
+        "calorieDeviationJson": "calorieDeviationJson"
+    }
 }

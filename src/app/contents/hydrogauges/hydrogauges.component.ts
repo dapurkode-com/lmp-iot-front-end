@@ -8,9 +8,9 @@ import global from '../../_file/app.json';
   styleUrls: ['./hydrogauges.component.scss']
 })
 export class HydrogaugesComponent implements OnInit {
-  phObj = {
+  conductivityObj = {
     dateReadable: null,
-    ph: null,
+    conductivity: null,
   }
   ppmObj = {
     dateReadable: null,
@@ -25,34 +25,34 @@ export class HydrogaugesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.phObj = JSON.parse('' + localStorage.getItem(global.string_key.phJson))
+    this.conductivityObj = JSON.parse('' + localStorage.getItem(global.string_key.phJson))
     this.ppmObj = JSON.parse('' + localStorage.getItem(global.string_key.ppmJson))
     this.temperatureObj = JSON.parse('' + localStorage.getItem(global.string_key.temperatureJson))
 
-    this.setPhObj()
+    this.setConductivityObj()
     this.setPpmObj()
     this.setTemperatureObj()
 
-    this.timeInterval =  setInterval(() => {
-      this.setPhObj()
+    this.timeInterval = setInterval(() => {
+      this.setConductivityObj()
       this.setPpmObj()
       this.setTemperatureObj()
-    }, 1000*60)
+    }, 1000 * 60)
   }
   ngOnDestroy(): void {
     clearInterval(this.timeInterval)
-    localStorage.setItem(global.string_key.phJson, JSON.stringify(this.phObj))
+    localStorage.setItem(global.string_key.phJson, JSON.stringify(this.conductivityObj))
     localStorage.setItem(global.string_key.ppmJson, JSON.stringify(this.ppmObj))
     localStorage.setItem(global.string_key.temperatureJson, JSON.stringify(this.temperatureObj))
   }
 
-  setPhObj(): void {
-    fetch(`${global.api_url}ph/latest`)
+  setConductivityObj(): void {
+    fetch(`${global.api_url}conductivity/latest`)
       .then(response => response.json())
       .then(data => {
         if (data.status != 'failed') {
           data.dateReadable = moment(data.datetime).format('DD MMMM YYYY, h:mmA')
-          this.phObj = data
+          this.conductivityObj = data
         }
       });
   }
