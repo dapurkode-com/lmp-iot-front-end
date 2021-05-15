@@ -12,6 +12,11 @@ export class DashHydrogaugesComponent implements OnInit, OnDestroy {
     dateReadable: null,
     ph: null,
   }
+  conductivityObj = {
+    dateReadable: null,
+    conductivity: null,
+    conductivityString: null,
+  }
   ppmObj = {
     dateReadable: null,
     ppm: null,
@@ -26,15 +31,18 @@ export class DashHydrogaugesComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.phObj = JSON.parse('' + localStorage.getItem(global.string_key.phJson))
+    this.conductivityObj = JSON.parse('' + localStorage.getItem(global.string_key.conductivityJson))
     this.ppmObj = JSON.parse('' + localStorage.getItem(global.string_key.ppmJson))
     this.temperatureObj = JSON.parse('' + localStorage.getItem(global.string_key.temperatureJson))
 
     this.setPhObj()
+    this.setConductivityObj()
     this.setPpmObj()
     this.setTemperatureObj()
 
     this.timeInterval =  setInterval(() => {
       this.setPhObj()
+      this.setConductivityObj()
       this.setPpmObj()
       this.setTemperatureObj()
     }, 1000*60)
@@ -43,6 +51,7 @@ export class DashHydrogaugesComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     clearInterval(this.timeInterval)
     localStorage.setItem(global.string_key.phJson, JSON.stringify(this.phObj))
+    localStorage.setItem(global.string_key.conductivityJson, JSON.stringify(this.conductivityObj))
     localStorage.setItem(global.string_key.ppmJson, JSON.stringify(this.ppmObj))
     localStorage.setItem(global.string_key.temperatureJson, JSON.stringify(this.temperatureObj))
   }
@@ -54,6 +63,16 @@ export class DashHydrogaugesComponent implements OnInit, OnDestroy {
         if (data.status != 'failed') {
           data.dateReadable = moment(data.datetime).format('DD MMMM YYYY, h:mmA')
           this.phObj = data
+        }
+      });
+  }
+  setConductivityObj(): void {
+    fetch(`${global.api_url}conductivity/latest`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.status != 'failed') {
+          data.dateReadable = moment(data.datetime).format('DD MMMM YYYY, h:mmA')
+          this.conductivityObj = data
         }
       });
   }

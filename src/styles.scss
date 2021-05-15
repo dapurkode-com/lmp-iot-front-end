@@ -121,9 +121,15 @@ $color-muted: #6c7293;
     background: #009688;
     color: #cddc39;
   }
+  .text-success {
+    color: #05bcab !important;
+  }
+  .text-danger {
+    color: #f44336 !important;
+  }
   @media (max-width: 576px) {
     h4 {
-      font-size: 1.125rem;
+      font-size: 1.125rem !important;
     }
   }
 }

@@ -14,6 +14,7 @@
         "stockJson": "stockJson",
         "stockSummaryJson": "stockSummaryJson",
         "stepStatusJson": "stepStatusJson",
-        "calorieDeviationJson": "calorieDeviationJson"
+        "calorieDeviationJson": "calorieDeviationJson",
+        "waterQualityJson": "waterQualityJson"
     }
 }
