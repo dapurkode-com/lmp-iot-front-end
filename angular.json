@@ -28,7 +28,9 @@
                         "aot": true,
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            "src/OneSignalSDKUpdaterWorker.js",
+                            "src/OneSignalSDKWorker.js"
                         ],
                         "styles": [
                             "assets/corona-free-dark-bootstrap-admin-template/template/assets/vendors/mdi/css/materialdesignicons.min.css",
