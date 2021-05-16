@@ -1,5 +1,5 @@
 {
-    "api_url": "http://lmp.dapurkode.com/api/",
+    "api_url": "https://lmp.dapurkode.com/api/",
     "string_key": {
         "calorieInJson": "calorieInJson",
         "calorieOutJson": "calorieOutJson",
