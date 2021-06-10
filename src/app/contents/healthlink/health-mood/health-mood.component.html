@@ -1,52 +1,42 @@
+<div class="card mb-5 bg-gradient-primary">
+  <div class="card-body">
+    <h4 class="card-title text-md-center">Your mood is</h4>
+    <h3 class="mb-0 mt-2 text-warning text-md-center">
+      {{ heartRateObj?.mood_text || 'Undiscovered, you should check your health.. ' }}</h3>
+  </div>
+</div>
 <div class="emoji__grid">
   <div class="card">
     <div class="card-body">
       <div class="d-flex justify-content-between">
-        <h3 class="align-self-center mb-0">43%</h3>
-        <div class="icon icon-box-warning">
-          <span class="fas fa-grin-tongue-squint icon-item"></span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <div class="d-flex justify-content-between">
-        <h3 class="align-self-center mb-0">11%</h3>
+        <h3 class="align-self-center mb-0">{{ heartRateObj?.happy }} %</h3>
         <div class="icon icon-box-warning">
           <span class="fas fa-smile-beam icon-item"></span>
         </div>
       </div>
+      <small>Happy</small>
     </div>
   </div>
   <div class="card">
     <div class="card-body">
       <div class="d-flex justify-content-between">
-        <h3 class="align-self-center mb-0">22%</h3>
+        <h3 class="align-self-center mb-0">{{ heartRateObj?.neutral }} %</h3>
         <div class="icon icon-box-warning">
           <span class="fas fa-meh icon-item"></span>
         </div>
       </div>
+      <small>Neutral</small>
     </div>
   </div>
   <div class="card">
     <div class="card-body">
       <div class="d-flex justify-content-between">
-        <h3 class="align-self-center mb-0">5%</h3>
+        <h3 class="align-self-center mb-0">{{ heartRateObj?.sad }} %</h3>
         <div class="icon icon-box-warning">
           <span class="fas fa-sad-tear icon-item"></span>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <div class="d-flex justify-content-between">
-        <h3 class="align-self-center mb-0">19%</h3>
-        <div class="icon icon-box-warning">
-          <span class="fas fa-tired icon-item"></span>
-        </div>
-      </div>
+      <small>Sad</small>
     </div>
   </div>
 </div>
